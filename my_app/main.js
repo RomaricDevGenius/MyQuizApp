@@ -1,6 +1,3 @@
-
-
-
 // app.innerHTML = `<div>
 // <h1>
 //     bonjour a tous
@@ -8,18 +5,15 @@
 // <input/>
 // </div>`;
 
-
-
 // const colors = ["red", "yellow", "green" , " blue"]
 
 // let i = 0;
 
 // setInterval(()=>{
-//     //mettre un background 
+//     //mettre un background
 //     app.style.backgroundColor = colors[i]
 //     i = (i + 1) % colors.length
 // }, 1000);
-
 
 // const div = document.createElement("div");
 
@@ -27,7 +21,6 @@
 //     parent:div.parentElement,
 //     contenue: div.innerHTML,
 // });
-
 
 //tres conseiller au lieu de faire des innerText
 
@@ -38,15 +31,8 @@
 // div.appendChild(input);
 // app.appendChild(div);
 
-
-
-
 // const color = ["red" , "blue" , "yellow"];
 // let i = 0;
-
-
-
-
 
 // btn1.addEventListener("click",
 //     () => {
@@ -60,10 +46,9 @@
 //     if (i>Questions.length - 1) {
 //         i=0;
 //     }
-    
+
 // }
 // );
-
 
 import "./style.css";
 import { Questions } from "./questions";
@@ -73,6 +58,19 @@ const TIMEOUT = 4000;
 const app = document.querySelector("#app");
 
 const startButton = document.querySelector("#start");
+
+//je les dabord selectionner mais je ne les pas encore donner d'evenement
+const rep = document.querySelector("p");
+
+const js = document.querySelector(".js");
+
+const colors = ["red", "yellow", "blue", "green"];
+
+let i = 0;
+setInterval(() => {
+  js.style.backgroundColor = colors[i];
+  i = (i + 1) % colors.length;
+}, 1000);
 
 startButton.addEventListener("click", startQuiz);
 
@@ -260,8 +258,3 @@ function disableAllAnswers() {
     radio.disabled = true;
   }
 }
-
-
-
-
-
